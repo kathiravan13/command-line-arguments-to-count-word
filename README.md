@@ -28,13 +28,13 @@ Use len() to find the total words.
 Developed by: kathiravan.p
 Register Number: 212222230063
 '''
-fname=input("enter the file name")
-num_words=0
-with open(fname, 'r') as f:
-    for line in f:
-        words=line.split()
-        num_words+=len(words)
-print('Number of words: ',num_words)
+import sys
+count=0
+fp=open(sys.argv[1],'r')
+for line in fp:
+    list1=line.split()
+    count+=len(list1)
+print("no of words in a file",count)
 ### OUTPUT:
 
 ![5b](https://github.com/kathiravan13/command-line-arguments-to-count-word/assets/119831303/18f5c211-fc03-4e72-b450-941303c46505)
